@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://WebService/" xmlns:tns="http://WebService/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Exception" nillable="true" type="tns:exceptionBean"/>
+
+  <xs:element name="hello" nillable="true" type="tns:hello"/>
+
+  <xs:element name="helloResponse" nillable="true" type="tns:helloResponse"/>
+
+  <xs:element name="listarProd" nillable="true" type="tns:listarProd"/>
+
+  <xs:element name="listarProdResponse" nillable="true" type="tns:listarProdResponse"/>
+
+  <xs:element name="testeNum" nillable="true" type="tns:testeNum"/>
+
+  <xs:element name="testeNumResponse" nillable="true" type="tns:testeNumResponse"/>
+
+  <xs:element name="testeVet" nillable="true" type="tns:testeVet"/>
+
+  <xs:element name="testeVetResponse" nillable="true" type="tns:testeVetResponse"/>
+
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="testeVet">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="testeVetResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="listarProd">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="listarProdResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:produto" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="produto">
+    <xs:sequence>
+      <xs:element name="categoria" type="xs:string" minOccurs="0"/>
+      <xs:element name="descricao" type="xs:string" minOccurs="0"/>
+      <xs:element name="idProduto" type="xs:int"/>
+      <xs:element name="nome" type="xs:string" minOccurs="0"/>
+      <xs:element name="preco" type="xs:double"/>
+      <xs:element name="qtd" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="exceptionBean">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="testeNum">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="testeNumResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

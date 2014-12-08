@@ -1,0 +1,8 @@
+
+- Soap retorna lista, mas não testado ainda ;
+    - Retorna ArrayList com todos os produtos de acordo com a pesquisa;
+
+- Restful testado e funcionando;
+    - retorna todos os produtos
+
+
